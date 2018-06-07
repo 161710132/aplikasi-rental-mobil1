@@ -15,10 +15,14 @@ class CreateSupirsTable extends Migration
     {
         Schema::create('supirs', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('foto_supir');
             $table->string('nama');
-            $table->text('alamat');
+            $table->string('jenis_kelamin');
+            $table->integer('nik');
+            $table->string('no_hp');
+            $table->text('alamat')->nullable();
             $table->integer('umur');
-            $table->integer('harga');
+            $table->integer('harga_sewasupir');
             $table->timestamps();
         });
     }

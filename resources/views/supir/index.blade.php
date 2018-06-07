@@ -7,7 +7,7 @@
 	<div class="container">
 		<div class="col-md-12">
 			<div class="panel panel-primary">
-			  <div class="panel-heading">Data Dosen
+			  <div class="panel-heading">Data Supir
 			  	<div class="panel-title pull-right"><a href="{{ route('supir.create') }}">Tambah</a>
 			  	</div>
 			  </div>
@@ -15,11 +15,15 @@
                 <table class="table table-borderless table-striped table-earning">
 				  	<thead>
 			  		<tr>
-			  		  <th>No</th>
+			  		  <th>No</th>	
+			  		  <th>Foto Supir</th>										
 					  <th>Nama</th>
+					  <th>Jenis Kelamin</th>
+					  <th>NIK</th>
+					  <th>No Handphone</th>
 					  <th>Alamat</th>
 					  <th>Umur</th>
-					  <th>Harga</th>
+					  <th>Harga Sewa Supir</th>
 					  <th colspan="3">Action</th>
 			  		</tr>
 				  	</thead>
@@ -29,10 +33,14 @@
 				  		@foreach($supir as $data)
 				  	  <tr>
 				    	<td>{{ $no++ }}</td>
+				    	<td><img src="{{asset('/img/'.$data->foto_supir.'')}} " width="70" height="70"></td>
 				    	<td>{{ $data->nama }}</td>
+				    	<td>{{ $data->jenis_kelamin }}</td>
+				    	<td>{{ $data->nik }}</td>
+				    	<td>{{ $data->no_hp }}</td>
 				    	<td>{{ $data->alamat }}</td>
-				    	<td>{{ $data->umur }}</td>
-				    	<td>{{ $data->harga }}</td>
+				    	<td>{{ $data->umur }} Tahun</td>
+				    	<td>Rp. {{ $data->harga_sewasupir }}</td>
 				    	
 <td>
 	<a class="btn btn-warning" href="{{ route('supir.edit',$data->id) }}">Edit</a>

@@ -13,6 +13,23 @@
 			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>
+
+			  <div class="panel-body">
+              <form class="form-horizontal form-label-left" action="{{ route('mobil.store') }}" method="post" enctype="multipart/form-data">
+              {{ csrf_field() }}
+
+              <div class="form-group {{ $errors->has('foto_mobil') ? ' has-error' : '' }}">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-3">Foto Supir</label>
+                          <div class="col-md-9 pr-1">
+                          <input type="file" name="foto_mobil" class="form-control" required="" style="background-color: #0000">
+                            @if ($errors->has('foto_mobil'))
+                              <span class="help-block">
+                                <strong>{{ $errors->first('foto_mobil') }}</strong>
+                              </span>
+                          @endif
+                          </div>
+                        </div>
+
 			  <div class="panel-body">
 			  	<form action="{{ route('mobil.store') }}" method="post" >
 			  		{{ csrf_field() }}
@@ -66,12 +83,12 @@
                         @endif
 			  		</div>
 
-			  		<div class="form-group {{ $errors->has('harga') ? ' has-error' : '' }}">
-			  			<label class="control-label">harga</label>	
-			  			<input type="text" name="harga" class="form-control"  required>
-			  			@if ($errors->has('harga'))
+			  		<div class="form-group {{ $errors->has('harga_sewa') ? ' has-error' : '' }}">
+			  			<label class="control-label">Harga</label>	
+			  			<input type="text" name="harga_sewa" class="form-control"  required>
+			  			@if ($errors->has('harga_sewa'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('harga') }}</strong>
+                                <strong>{{ $errors->first('harga_sewa') }}</strong>
                             </span>
                         @endif
 			  		</div>

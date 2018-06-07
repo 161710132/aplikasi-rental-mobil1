@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Mobil extends Model
 {
-    protected $fillable = ['nama','perseneling','plat_no','warna','tahun_keluaran','harga','stock','jenis','merk_id'];
+    protected $fillable = ['foto_mobil','nama','perseneling','plat_no','warna','tahun_keluaran','harga_sewa','stock','jenis','merk_id'];
     public $timestamps = true;
 
     public function Merk()
@@ -34,4 +34,8 @@ class Mobil extends Model
         return $this->hasMany('App\Booking','mobil_id');
     }
     
+    public function Rental()
+    {
+        return $this->hasMany('App\Rental','mobil_id');
+    }
 }

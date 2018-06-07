@@ -11,9 +11,8 @@
 			  	<div class="panel-title pull-right"><a href="{{ route('pemesanan.create') }}">Tambah</a>
 			  	</div>
 			  </div>
-			  <div class="panel-body">
-			  	<div class="table-responsive">
-				  <table class="table">
+			  <div class="table-responsive table--no-card m-b-30">
+                <table class="table table-borderless table-striped table-earning">
 				  	<thead>
 			  		<tr>
 			  		  <th>No</th>

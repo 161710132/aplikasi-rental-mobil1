@@ -15,12 +15,13 @@ class CreateMobilsTable extends Migration
     {
         Schema::create('mobils', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('foto_mobil');
             $table->string('nama');
             $table->string('perseneling');
             $table->string('plat_no');
             $table->string('warna');
             $table->string('tahun_keluaran');
-            $table->integer('harga');
+            $table->integer('harga_sewa');
             $table->integer('stock');
             $table->string('jenis');
             $table->UnsignedInteger('merk_id');

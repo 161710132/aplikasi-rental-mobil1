@@ -18,12 +18,13 @@
                  <thead>
 			  		<tr>
 			  		  <th>No</th>
+			  		  <th>Foto Mobil</th>
 					  <th>Nama Mobil</th>
 					  <th>Perseneling</th>
 					  <th>Plat No</th>
 					  <th>Warna</th>
 					  <th>Tahun Keluaran</th>
-					  <th>Harga</th>
+					  <th>Harga Sewa</th>
 					  <th>Stock</th>
 					  <th>Jenis</th>
 					  <th>Merk</th>
@@ -36,12 +37,13 @@
 				  		@foreach($mobil as $data)
 				  	  <tr>
 				    	<td>{{ $no++ }}</td>
+				    	<td><img src="{{asset('/img/'.$data->foto_mobil.'')}} " width="70" height="70"></td>
 				    	<td>{{ $data->nama }}</td>
 				    	<td><p>{{ $data->perseneling }}</p></td>
 				    	<td><p>{{ $data->plat_no }}</p></td>
 				    	<td><p>{{ $data->warna }}</p></td>
 				    	<td><p>{{ $data->tahun_keluaran }}</p></td>
-				    	<td><p>Rp. {{ $data->harga }}</p></td>
+				    	<td><p>Rp. {{ $data->harga_sewa }}</p></td>
 				    	<td><p>{{ $data->stock }}</p></td>
 				    	<td><p>{{ $data->jenis }}</p></td>
 				    	<td><p>{{ $data->Merk->nama_merk }}</p></td>

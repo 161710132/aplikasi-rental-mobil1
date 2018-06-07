@@ -13,19 +13,34 @@
 			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>
+
 			  <div class="panel-body">
-			  	<form action="{{ route('mobil.update',$mobil->id) }}" method="post" >
-			  		<input name="_method" type="hidden" value="PATCH">
-        			{{ csrf_field() }}
-			  		<div class="form-group {{ $errors->has('nama') ? ' has-error' : '' }}">
-			  			<label class="control-label">Nama Mobil</label>	
-			  			<input type="text" name="nama" class="form-control" value="{{ $mobil->nama }}" required>
+              <form class="form-horizontal form-label-left" action="{{ route('mobil.update',$mobil->id) }}" method="post" enctype="multipart/form-data">
+                <input name="_method" type="hidden" value="PATCH">
+              {{ csrf_field() }}
+
+              <div class="form-group {{ $errors->has('foto_mobil') ? ' has-error' : '' }}">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-3">Foto mobil</label>
+                          <div class="col-md-9 pr-1">
+                          <input type="file" name="foto_mobil" class="form-control" required="" style="background-color: #0000">
+                            @if ($errors->has('foto_mobil'))
+                              <span class="help-block">
+                                <strong>{{ $errors->first('foto_mobil') }}</strong>
+                              </span>
+                          @endif
+                          </div>
+                        </div>
+
+			  <div class="form-group {{ $errors->has('nama') ? ' has-error' : '' }}">
+			  			<label class="control-label">Nama</label>	
+			  			<input type="text" value="{{ $mobil->nama }}" name="nama" class="form-control"  required>
 			  			@if ($errors->has('nama'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('nama') }}</strong>
                             </span>
                         @endif
 			  		</div>
+
 
 			  		<div class="form-group {{ $errors->has('perseneling') ? ' has-error' : '' }}">
 			  			<label class="control-label">perseneling</label>	
@@ -67,12 +82,12 @@
                         @endif
 			  		</div>
 
-			  		<div class="form-group {{ $errors->has('harga') ? ' has-error' : '' }}">
-			  			<label class="control-label">harga</label>	
-			  			<input type="text" value="{{ $mobil->harga }}" name="harga" class="form-control"  required>
-			  			@if ($errors->has('harga'))
+			  		<div class="form-group {{ $errors->has('harga_sewa') ? ' has-error' : '' }}">
+			  			<label class="control-label">Harga</label>	
+			  			<input type="text" value="{{ $mobil->harga_sewa }}" name="harga_sewa" class="form-control"  required>
+			  			@if ($errors->has('harga_sewa'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('harga') }}</strong>
+                                <strong>{{ $errors->first('harga_sewa') }}</strong>
                             </span>
                         @endif
 			  		</div>

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Supir extends Model
 {
-    protected $fillable = ['nama','alamat','umur','harga'];
+    protected $fillable = ['foto_supir','nama','jenis_kelamin','nik','no_hp','alamat','umur','harga_sewasupir'];
     public $timestamps = true;
 
     public function Mobil()
@@ -27,5 +27,10 @@ class Supir extends Model
     public function Booking()
     {
         return $this->hasMany('App\Booking','supir_id');
+    }
+
+    public function Rental()
+    {
+        return $this->hasMany('App\Rental','mobil_id');
     }
 }

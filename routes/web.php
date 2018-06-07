@@ -17,19 +17,20 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('booking','BookingController');
 
+	Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix'=>'admin', 'middleware'=>['auth','role:admin']], function(){
+	Route::group(['prefix'=>'admin', 'middleware'=>['auth','role:admin']], function(){
 	Route::resource('merk','MerkController');
 	Route::resource('mobil','MobilController');
 	Route::resource('customer','CustomerController');
 	Route::resource('supir','SupirController');
 	Route::resource('pemesanan','PemesananController');
+	Route::resource('booking','BookingController');
+});
 
-
-
+Route::get('user1',function(){
+	return view('layouts.user1');
 });
 
 Route::get('user',function(){

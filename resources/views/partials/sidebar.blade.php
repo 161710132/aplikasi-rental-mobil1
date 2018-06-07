@@ -9,7 +9,7 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                                <i class="fa fa-automobile" style="font-size:24px;"></i>Dashboard</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
                                     <a href="{{ route('mobil.index') }}">Mobil</a>
@@ -26,24 +26,16 @@
                                  <li>
                                     <a href="{{ route('pemesanan.index') }}">Pemesanan</a>
                                 </li>
-                                 <li>
-                                    <a href="{{ route('booking.index') }}">Booking</a>
-                                </li>
+                                 
                                 
                             </ul>
                         </li>
-                        <li>
-                            <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
-                        </li>
+                        
                         <li>
                             <a href="table.html">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
-                        </li>
+                        
                         <li>
                             <a href="#">
                                 <i class="fas fa-calendar-alt"></i>Calendar</a>
