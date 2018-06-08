@@ -36,3 +36,5 @@ Route::get('user1',function(){
 Route::get('user',function(){
 	return view('layouts.user');
 });
+
+Route::resource('laporankembalian','LaporanpengembalianController');

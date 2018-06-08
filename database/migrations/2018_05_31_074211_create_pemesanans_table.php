@@ -23,8 +23,12 @@ class CreatePemesanansTable extends Migration
             $table->UnsignedInteger('mobil_id');
             $table->foreign('mobil_id')->references('id')->on('mobils')->ondelete('cascade');
 
+            $table->string('foto_mobil');
+
             $table->UnsignedInteger('supir_id');
             $table->foreign('supir_id')->references('id')->on('supirs')->ondelete('cascade');
+            
+            $table->string('foto_supir');
             $table->timestamps();
         });
     }

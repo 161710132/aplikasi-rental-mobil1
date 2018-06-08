@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pemesanan extends Model
 {
-    protected $fillable = ['tanggal_pemesanan','tanggal_pengembalian','customer_id','mobil_id','supir_id'];
+    protected $fillable = ['tanggal_pemesanan','tanggal_pengembalian','customer_id','mobil_id','foto_mobil','supir_id','foto_supir'];
     public $timestamps = true;
 
     public function Customer()

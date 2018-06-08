@@ -6,6 +6,7 @@ use App\Mobil;
 use Illuminate\Http\Request;
 use App\Merk;
 use Session;
+use File;
 
 class MobilController extends Controller
 {
@@ -113,18 +114,18 @@ class MobilController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'foto_mobil'=>'required|',
+            'foto_mobil'=>'image|max:2048',
             'nama' => 'required|',
             'perseneling' => 'required|',
             'plat_no' => 'required|',
             'warna' => 'required|',
             'tahun_keluaran'=> 'required|',
-            'harga'=>'required|',
+            'harga_sewa'=>'required|',
             'stock'=>'required|',
             'jenis'=>'required|'
         ]);
         $mobil = Mobil::findOrFail($id);
-        $mobil->foto_mobil = $request->foto_mobil;
+        
         $mobil->nama = $request->nama;
         $mobil->perseneling = $request->perseneling;
         $mobil->plat_no = $request->plat_no;
@@ -175,7 +176,7 @@ class MobilController extends Controller
      */
     public function destroy($id)
     {
-        $merk = Mobil::findOrFail($id);
+        $mobil = Mobil::findOrFail($id);
 
         if ($mobil->foto_mobil){
             $old_foto = $mobil->foto_mobil;
@@ -188,7 +189,7 @@ class MobilController extends Controller
             }
         } 
 
-        $merk->delete();
+        $mobil->delete();
         Session::flash("flash_notification", [
         "level"=>"success",
         "message"=>"Data Berhasil dihapus"

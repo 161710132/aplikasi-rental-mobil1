@@ -50,7 +50,9 @@ class PemesananController extends Controller
             'tanggal_pengembalian' => 'required|',
             'customer_id'=>'required|',
             'mobil_id'=>'required|',
-            'supir_id'=>'required|'
+            'foto_mobil'=>'required|',
+            'supir_id'=>'required|',
+            'foto_supir'=>'required|',
         ]);
         $pemesanan = new Pemesanan;
         $pemesanan->tanggal_pemesanan = $request->tanggal_pemesanan;
@@ -58,6 +60,22 @@ class PemesananController extends Controller
         $pemesanan->customer_id = $request->customer_id;
         $pemesanan->mobil_id = $request->mobil_id;
         $pemesanan->supir_id = $request->supir_id;
+        if ($request->hasFile('foto_mobil')) {
+            $file = $request->file('foto_mobil');
+            $filename = str_random(6). '_'.$file->getClientOriginalName();
+            $desinationPath = public_path() .DIRECTORY_SEPARATOR. 'img';
+            $uploadSucces = $file->move($desinationPath, $filename);
+            $pemesanan->foto_mobil = $filename;
+        } 
+        
+        if ($request->hasFile('foto_supir')) {
+            $file = $request->file('foto_supir');
+            $filename = str_random(6). '_'.$file->getClientOriginalName();
+            $desinationPath = public_path() .DIRECTORY_SEPARATOR. 'img';
+            $uploadSucces = $file->move($desinationPath, $filename);
+            $pemesanan->foto_supir = $filename;
+        }
+
         $pemesanan->save();
         
 

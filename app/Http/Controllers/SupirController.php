@@ -40,7 +40,7 @@ class SupirController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'foto_supir' => 'required|',
+            'foto_supir' => 'image|max:2048',
             'nama' => 'required|',
             'jenis_kelamin' => 'required|',
             'nik' => 'required|',

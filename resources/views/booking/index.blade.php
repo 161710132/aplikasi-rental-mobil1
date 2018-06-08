@@ -1,16 +1,20 @@
 @extends('layouts.admin')
 @section('content')
+<section class="card">
+<div class="card-body text-secondary">col-lg-12</div>
+</section>
 <div class="row">
 	<div class="container">
 		<div class="col-md-12">
 			<div class="panel panel-primary">
-			  <div class="panel-heading">Data Post
-			  	<div class="panel-title pull-right"><a href="{{ route('booking.create') }}">Tambah</a>
-			  	</div>
+			  <div class="panel-heading">Data Booking
+			  	<div class="panel-title pull-right"><a class="btn btn-success" href="{{ route('booking.create') }}">Tambah</a>
+
 			  </div>
-			  <div class="panel-body">
-			  	<div class="table-responsive">
-				  <table class="table">
+			  </div>
+			  <br><br>
+			  <div class="table-responsive table--no-card m-b-30">
+                <table class="table table-borderless table-striped table-earning">
 				  	<thead>
 			  		<tr>
 			  		  <th>No</th>
@@ -34,9 +38,9 @@
 						<td>
 							<a class="btn btn-warning" href="{{ route('booking.edit',$data->id) }}">Edit</a>
 						</td>
-						<td>
+						<!-- <td>
 							<a href="{{ route('booking.show',$data->id) }}" class="btn btn-success">Show</a>
-						</td>
+						</td> -->
 						<td>
 							<form method="post" action="{{ route('booking.destroy',$data->id) }}">
 								<input name="_token" type="hidden" value="{{ csrf_token() }}">

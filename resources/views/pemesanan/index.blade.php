@@ -20,7 +20,9 @@
 					  <th>Tanggal Pengembalian</th>
 					  <th>Nama Customer</th>
 					  <th>Nama Mobil</th>
+					  <th>Foto Mobil</th>
 					  <th>Nama Supir</th>
+					  <th>Foto Supir</th>
 					  <th colspan="3">Action</th>
 			  		</tr>
 				  	</thead>
@@ -34,13 +36,15 @@
 				    	<td><p>{{ $data->tanggal_pengembalian }}</p></td>
 				    	<td><p>{{ $data->Customer->nama }}</p></td>
 				    	<td><p>{{ $data->Mobil->nama }}</p></td>
+				    	<td><img src="{{asset('/img/'.$data->foto_mobil.'')}} " width="70" height="70"></td>
 				    	<td><p>{{ $data->Supir->nama }}</p></td>
+				    	<td><img src="{{asset('/img/'.$data->foto_supir.'')}} " width="70" height="70"></td>
 						<td>
 							<a class="btn btn-warning" href="{{ route('pemesanan.edit',$data->id) }}">Edit</a>
 						</td>
-						<td>
+						<!-- <td>
 							<a href="{{ route('pemesanan.show',$data->id) }}" class="btn btn-success">Show</a>
-						</td>
+						</td> -->
 						<td>
 							<form method="post" action="{{ route('pemesanan.destroy',$data->id) }}">
 								<input name="_token" type="hidden" value="{{ csrf_token() }}">

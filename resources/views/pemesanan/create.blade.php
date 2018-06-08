@@ -1,5 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('content')
+<section class="card">
+<div class="card-body text-secondary">col-lg-12</div>
+</section>
 <div class="row">
 	<div class="container">
 		<div class="col-md-12">
@@ -58,6 +61,18 @@
                         @endif
 			  		</div>
 
+			  		<div class="form-group {{ $errors->has('foto_mobil') ? ' has-error' : '' }}">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-3">Foto Mobil</label>
+                          <div class="col-md-9 pr-1">
+                          <input type="file" name="foto_mobil" class="form-control" required="" style="background-color: #0000">
+                            @if ($errors->has('foto_mobil'))
+                              <span class="help-block">
+                                <strong>{{ $errors->first('foto_mobil') }}</strong>
+                              </span>
+                          @endif
+                          </div>
+                        </div>
+
 			  		<div class="form-group {{ $errors->has('supir_id') ? ' has-error' : '' }}">
 			  			<label class="control-label">Supir</label>	
 			  			<select name="supir_id" class="form-control">
@@ -71,6 +86,18 @@
                             </span>
                         @endif
 			  		</div>
+
+			  		<div class="form-group {{ $errors->has('foto_supir') ? ' has-error' : '' }}">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-3">Foto Supir</label>
+                          <div class="col-md-9 pr-1">
+                          <input type="file" name="foto_supir" class="form-control" required="" style="background-color: #0000">
+                            @if ($errors->has('foto_supir'))
+                              <span class="help-block">
+                                <strong>{{ $errors->first('foto_supir') }}</strong>
+                              </span>
+                          @endif
+                          </div>
+                        </div>
 			  		
 			  		<div class="form-group">
 			  			<button type="submit" class="btn btn-primary">Tambah</button>

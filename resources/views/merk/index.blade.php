@@ -10,9 +10,11 @@
 			<div class="panel panel-primary">
 			  <div class="panel-heading">Data Merk Mobil
 			  <br>
-			  	<div class="panel-title pull-right"><a href="{{ route('merk.create') }}">Tambah</a>
-			  	</div>
+			  	<div class="panel-title pull-right"><a class="btn btn-success" href="{{ route('merk.create') }}">Tambah</a>
+
 			  </div>
+			  </div>
+			  <br><br>
 			  <div class="table-responsive table--no-card m-b-30">
                 <table class="table table-borderless table-striped table-earning">
 				  	<thead>
@@ -34,9 +36,9 @@
 <td>
 	<a class="btn btn-warning" href="{{ route('merk.edit',$data->id) }}">Edit</a>
 </td>
-<td>
+<!-- <td>
 	<a href="{{ route('merk.show',$data->id) }}" class="btn btn-success">Show</a>
-</td>
+</td> -->
 <td>
 	<form method="post" action="{{ route('merk.destroy',$data->id) }}">
 		<input name="_token" type="hidden" value="{{ csrf_token() }}">

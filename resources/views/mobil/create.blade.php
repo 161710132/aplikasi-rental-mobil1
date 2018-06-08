@@ -19,7 +19,7 @@
               {{ csrf_field() }}
 
               <div class="form-group {{ $errors->has('foto_mobil') ? ' has-error' : '' }}">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-3">Foto Supir</label>
+                          <label class="control-label col-md-3 col-sm-3 col-xs-3">Foto Mobil</label>
                           <div class="col-md-9 pr-1">
                           <input type="file" name="foto_mobil" class="form-control" required="" style="background-color: #0000">
                             @if ($errors->has('foto_mobil'))

@@ -19,7 +19,13 @@
               <div class="form-group {{ $errors->has('foto_supir') ? ' has-error' : '' }}">
                           <label class="control-label col-md-3 col-sm-3 col-xs-3">Foto Supir</label>
                           <div class="col-md-9 pr-1">
-                          <input type="file" name="foto_supir" class="form-control" required="" style="background-color: #0000">
+                          <input type="file" name="foto_supir" class="form-control" value="{{ $supir->foto_supir}}"  style="background-color: #0000">
+                          @if(isset($supir)&& $supir->foto_supir)
+                          <p>
+                          	<br>
+                          	<img src="{{asset('img/'.$supir->foto_supir)}}">
+                          </p>
+                          @endif
                             @if ($errors->has('foto_supir'))
                               <span class="help-block">
                                 <strong>{{ $errors->first('foto_supir') }}</strong>

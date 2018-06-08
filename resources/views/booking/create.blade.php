@@ -1,5 +1,8 @@
 @extends('layouts.admin')
 @section('content')
+<section class="card">
+<div class="card-body text-secondary">col-lg-12</div>
+</section>
 <div class="row">
 	<div class="container">
 		<div class="col-md-12">
