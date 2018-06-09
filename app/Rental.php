@@ -19,5 +19,10 @@ class Rental extends Model
     {
     	return $this->belongsTo('App\Supir','supir_id');
     }
+
+    public function Kembali()
+    {
+    	return $this->HasOne('App\Kembali','rental_id');
+    }
     
 }

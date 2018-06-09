@@ -1,116 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Balay Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
 
-<head>
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
 
-    <!-- Title Page-->
-    <title>Login</title>
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="{{ asset ('/assests/user1/favicon.ico')}}">
 
-    <!-- Fontfaces CSS-->
-    <link href="{{ asset ('/assests/admin/css/font-face.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset ('/assests/admin/vendor/font-awesome-4.7/css/font-awesome.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset ('/assests/admin/vendor/font-awesome-5/css/fontawesome-all.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset ('/assests/admin/vendor/mdi-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" media="all">
+	<link href="{{ asset ('/assests/user1/https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700')}}" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ asset ('/assests/user1/css/animate.css')}}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ asset ('/assests/user1/css/icomoon.css')}}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ asset ('/assests/user1/css/bootstrap.css')}}">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{{ asset ('/assests/user1/css/flexslider.css')}}">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="{{ asset ('/assests/user1/fonts/flaticon/font/flaticon.css')}}">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{{ asset ('/assests/user1/css/owl.carousel.min.css')}}">
+	<link rel="stylesheet" href="{{ asset ('/assests/user1/css/owl.theme.default.min.css')}}">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ asset ('/assests/user1/css/style.css')}}">
 
-    <!-- Bootstrap CSS-->
-    <link href="{{ asset ('/assests/admin/vendor/bootstrap-4.1/bootstrap.min.css')}}" rel="stylesheet" media="all">
+	<!-- Modernizr JS -->
+	<script src="{{ asset ('/assests/user1/js/modernizr-2.6.2.min.js')}}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
-    <!-- Vendor CSS-->
-    <link href="{{ asset ('/assests/admin/vendor/animsition/animsition.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset ('/assests/admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset ('/assests/admin/vendor/wow/animate.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset ('/assests/admin/vendor/css-hamburgers/hamburgers.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset ('/assests/admin/vendor/slick/slick.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset ('/assests/admin/vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset ('/assests/admin/vendor/perfect-scrollbar/perfect-scrollbar.css')}}" rel="stylesheet" media="all">
+	</head>
+	<body>
 
-    <!-- Main CSS-->
-    <link href="{{ asset ('/assests/admin/css/theme.css')}}" rel="stylesheet" media="all">
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+			<h1 id="colorlib-logo"><a href="index.html">Balay</a></h1>
+			<!-- navbar -->
+			@include('partials4.navbar')
+			<!-- endnavbar -->
+			
 
-</head>
+			<div class="colorlib-footer">
+				<p><small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> <span>Demo Images: <a href="http://nothingtochance.co/" target="_blank">nothingtochance.co</a></span></small></p>
+			<!-- bagian medsos -->
+			@include('partials4.medsos')
+			<!-- end bagian medsos -->
+				
+			</div>
 
-<body class="animsition">
-    <div class="page-wrapper">
-        <div class="page-content--bge5">
-            <div class="container">
-                <div class="login-wrap">
-                    <div class="login-content">
-                        <div class="login-logo">
-                            <a href="#">
-                                <img src="{{ asset ('/assests/admin/images/icon/logo.png')}}" alt="CoolAdmin">
-                            </a>
-                        </div>
-                        <div class="login-form">
-                            <form action="" method="post">
-                                <div class="form-group">
-                                    <label>Email Address</label>
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
-                                </div>
-                                <div class="login-checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember">Remember Me
-                                    </label>
-                                    <label>
-                                        <a href="#">Forgotten Password?</a>
-                                    </label>
-                                </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
-                                <div class="social-login-content">
-                                    <div class="social-button">
-                                        <button class="au-btn au-btn--block au-btn--blue m-b-20">sign in with facebook</button>
-                                        <button class="au-btn au-btn--block au-btn--blue2">sign in with twitter</button>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="register-link">
-                                <p>
-                                    Don't you have account?
-                                    <a href="#">Sign Up Here</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		</aside>
 
-    </div>
+			<!-- images -->
+			@include('partials4.images')
+			<!-- images -->
+		
+	</div>
 
-    <!-- Jquery JS-->
-    <script src="{{ asset ('/assests/admin/vendor/jquery-3.2.1.min.js')}}"></script>
-    <!-- Bootstrap JS-->
-    <script src="{{ asset ('/assests/admin/vendor/bootstrap-4.1/popper.min.js')}}"></script>
-    <script src="{{ asset ('/assests/admin/vendor/bootstrap-4.1/bootstrap.min.js')}}"></script>
-    <!-- Vendor JS       -->
-    <script src="{{ asset ('/assests/admin/vendor/slick/slick.min.js')}}">
-    </script>
-    <script src="{{ asset ('/assests/admin/vendor/wow/wow.min.js')}}"></script>
-    <script src="{{ asset ('/assests/admin/vendor/animsition/animsition.min.js')}}"></script>
-    <script src="{{ asset ('/assests/admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js')}}">
-    </script>
-    <script src="{{ asset ('/assests/admin/vendor/counter-up/jquery.waypoints.min.js')}}"></script>
-    <script src="{{ asset ('/assests/admin/vendor/counter-up/jquery.counterup.min.js')}}">
-    </script>
-    <script src="{{ asset ('/assests/admin/vendor/circle-progress/circle-progress.min.js')}}"></script>
-    <script src="{{ asset ('/assests/admin/vendor/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
-    <script src="{{ asset ('/assests/admin/vendor/chartjs/Chart.bundle.min.js')}}"></script>
-    <script src="{{ asset ('/assests/admin/vendor/select2/select2.min.js')}}">
-    </script>
+	<!-- jQuery -->
+	<script src="{{ asset ('/assests/user1/js/jquery.min.js')}}"></script>
+	<!-- jQuery Easing -->
+	<script src="{{ asset ('/assests/user1/js/jquery.easing.1.3.js')}}"></script>
+	<!-- Bootstrap -->
+	<script src="{{ asset ('/assests/user1/js/bootstrap.min.js')}}"></script>
+	<!-- Waypoints -->
+	<script src="{{ asset ('/assests/user1/js/jquery.waypoints.min.js')}}"></script>
+	<!-- Flexslider -->
+	<script src="{{ asset ('/assests/user1/js/jquery.flexslider-min.js')}}"></script>
+	<!-- Sticky Kit -->
+	<script src="{{ asset ('/assests/user1/js/sticky-kit.min.js')}}"></script>
+	<!-- Owl carousel -->
+	<script src="{{ asset ('/assests/user1/js/owl.carousel.min.js')}}"></script>
+	<!-- Counters -->
+	<script src="{{ asset ('/assests/user1/js/jquery.countTo.js')}}"></script>
+	
+	
+	<!-- MAIN JS -->
+	<script src="{{ asset ('/assests/user1/js/main.js')}}"></script>
 
-    <!-- Main JS-->
-    <script src="{{ asset ('/assests/admin/js/main.js')}}"></script>
-
-</body>
-
+	</body>
 </html>
-<!-- end document-->
+

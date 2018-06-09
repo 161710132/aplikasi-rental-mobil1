@@ -31,6 +31,6 @@ class Supir extends Model
 
     public function Rental()
     {
-        return $this->hasMany('App\Rental','mobil_id');
+        return $this->hasMany('App\Rental','supir_id');
     }
 }

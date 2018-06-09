@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin1')
 @section('content')
 
 <section class="card">
@@ -10,7 +10,7 @@
 			<div class="panel panel-primary">
 			  <div class="panel-heading">Edit Data Merk Mobil
 			  <br> 
-			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
+			  	<div class="panel-title pull-left"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>
 			  <div class="panel-body">

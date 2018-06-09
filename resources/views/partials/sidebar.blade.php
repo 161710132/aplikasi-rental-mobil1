@@ -16,24 +16,7 @@
                                     <a href="{{ route('merk.index') }}">Merk Mobil</a>
                                 </li>
                                 </ul>
-                            <!-- <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="{{ route('mobil.index') }}">Mobil</a>
-                                </li>
-                                
-                                <li>
-                                    <a href="{{ route('customer.index') }}">Customer</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('supir.index') }}">Supir</a>
-                                </li>
-                                 <li>
-                                    <a href="{{ route('pemesanan.index') }}">Pemesanan</a>
-                                </li>
-                                 
-                                
-                            </ul>
-                        </li> -->
+                           
                         
                         <li>
                             <a href="{{ route('mobil.index') }}">
@@ -45,17 +28,14 @@
                                 <i class="fa fa-user-circle" style="font-size:24px; color:blue"></i>Supir</a>
                         </li>
                         <li>
-                            <a href="{{ route('customer.index') }}">
-                                <i class="fa fa-user" style="font-size:24px; color:blue"></i>Pengguna</a>
+                            <a href="{{ route('rental.index') }}">
+                        <i class="fa fa-asl-interpreting" style="font-size:24px; color: blue"></i>Data Rental</a>
                         </li>
 
-                       <!--  <li>
-                            <a href="{{ route('pemesanan.index') }}">
-                                <i class="fa fa-file" style="font-size:24px"></i>Pemesanan</a>
-                        </li> -->
+                       
 
-                        <li><a href="{{ route('booking.index') }}">
-                        <i class="fa fa-link" style="font-size:24px; color:blue"></i>Booking</a>
+                        <li><a href="{{ route('kembali.index') }}">
+                        <i class="fa fa-link" style="font-size:24px; color:blue"></i>Data Pengembalian</a>
                         </li>
                         
                             </ul>

@@ -374,7 +374,7 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap">
                                                                 <div class="avatar">
-                                                                    <img src="{{ asset ('{{ asset ('/assests/admin/images/icon/avata')}}r-02.jpg')}}" alt="John Smith">
+                            <img src="{{ asset ('/assests/admin/images/icon/avata')}}r-02.jpg')}}" alt="John Smith">
                                                                 </div>
                                                             </div>
                                                             <div class="text">

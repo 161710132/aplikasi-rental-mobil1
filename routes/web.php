@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', 'Select2Controller@index');
+Route::get('/cari', 'Select2Controller@loadData');
+
+Route::get('admin1',function(){
+	return view('layouts.admin1');
+});
+
 Auth::routes();
 
 
@@ -25,8 +32,8 @@ Auth::routes();
 	Route::resource('mobil','MobilController');
 	Route::resource('customer','CustomerController');
 	Route::resource('supir','SupirController');
-	Route::resource('pemesanan','PemesananController');
-	Route::resource('booking','BookingController');
+	Route::resource('rental','RentalController');
+	Route::resource('kembali','KembaliController');
 });
 
 Route::get('user1',function(){
@@ -37,4 +44,5 @@ Route::get('user',function(){
 	return view('layouts.user');
 });
 
-Route::resource('laporankembalian','LaporanpengembalianController');
+Route::resource('kembali','KembaliController');
+Route::resource('rental','RentalController');

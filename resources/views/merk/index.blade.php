@@ -1,10 +1,13 @@
-@extends('layouts.admin')
+@extends('layouts.admin1')
+<center>
 @section('content')
 
-<section class="card">
-<div class="card-body text-secondary">col-lg-12</div>
-</section>
-<div class="row">
+
+<!-- <section class="card-header">
+<div class="card-title ">col-lg-12</div>
+</section> -->
+
+			<div class="row">
 	<div class="container">
 		<div class="col-md-12">
 			<div class="panel panel-primary">
@@ -57,4 +60,6 @@
 		</div>
 	</div>
 </div>
+
 @endsection
+</center>
